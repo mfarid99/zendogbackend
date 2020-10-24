@@ -22,9 +22,10 @@ const dogRouter = require("./controllers/dog");
 ////////////
 //MIDDLEWARE
 ////////////
-NODE_ENV === "production" ? app.use(cors(corsOptions)) : app.use(cors());
+// NODE_ENV === "production" ? app.use(cors(corsOptions)) : app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny")); //logging
+app.use(cors())
 
 ///////////////
 //Routes and Routers
